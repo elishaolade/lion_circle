@@ -19,6 +19,16 @@
             </div>
           </div>
         </div>
+        <script>
+          var controller = new ScrollMagic.Controller();
+          // build scene
+          var scene = new ScrollMagic.Scene({
+                    triggerElement: "#banner"
+                  })
+                  .setTween("#animate1", 0.5, {backgroundColor: "green", scale: 2.5}) // trigger a TweenMax.to tween
+                  .addIndicators({name: "1 (duration: 0)"}) // add indicators (requires plugin)
+                  .addTo(controller);
+        </script>
       </div>
       <div class="sm-header">
         <div class="l-side">
@@ -72,35 +82,75 @@
       </div>
       <!--Large Header-->
     </header>
-    <section id="carousel">
-      <div class="carousel_container">
-        <div class="carousel slide carousel-fade" data-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img class="carousel-img" src="images/pink-and-dark-color-abstract-painting-2911527.jpg" alt="">
-            </div>
-            <div class="carousel-item">
-              <img class="carousel-img" src="images/pink-black-and-yellow-abstract-painting-2911519.jpg" alt="">
-            </div>
-          </div>
-        </div>
+    <div class="mobile-menu">
+      <div class="options-container">
+        <ul>
+          <li class="l-side_option">
+            <a href="#">Rings</a>
+          </li>
+          <li class="l-side_option">
+            <a href="#">Anklets</a>
+          </li>
+          <li class="l-side_option">
+            <a href="#">Bracelets</a>
+          </li>
+          <li class="l-side_option">
+            <a href="#">About</a>
+          </li>
+          <li class="l-side_option">
+            <a href="#">Shop</a>
+          </li>
+          <li class="l-side_option">
+            <a href="#">About</a>
+          </li>
+        </ul>
+        <h2>Collections</h2>
+        <ul>
+          <li class="l-side_option">
+            <a href="#">Rings</a>
+          </li>
+          <li class="l-side_option">
+            <a href="#">Anklets</a>
+          </li>
+          <li class="l-side_option">
+            <a href="#">Bracelets</a>
+          </li>
+          <li class="l-side_option">
+            <a href="#">About</a>
+          </li>
+          <li class="l-side_option">
+            <a href="#">Shop</a>
+          </li>
+          <li class="l-side_option">
+            <a href="#">About</a>
+          </li>
+        </ul>
+        <h2>About</h2>
+        <h2>FAQ</h2>
       </div>
+      <div class="overlay">
+
       </div>
-      <div class="collections-area">
-        <div class="w-container">
-          <div class="shop_the_edit-area">
-            SHOP THE EDIT
-          </div>
+    </div>
+    <section id="section">
+        <div class="x">
+          <img src="images/dramatic-rock-formations-and-gull-bird-amid-sea-4344705.jpg" alt="">
         </div>
-        <div class="favourites-area">
+        <div class="collections-area">
           <div class="w-container">
-            <div class="content">
-              <span>Favourites</span>
-              <a href="#" class="underline"><span>View Collection</span></a>
+            <div class="shop_the_edit-area">
+              SHOP THE EDIT
+            </div>
+          </div>
+          <div class="favourites-area">
+            <div class="w-container">
+              <div class="content">
+                <span>Favourites</span>
+                <a href="#" class="underline"><span>View Collection</span></a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
     </section>
     <section id="products">
       <div class="collection-display">
@@ -401,7 +451,9 @@
     </footer>
 
   </body>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/TextPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/ScrollToPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/ScrollTrigger.min.js"></script>
+
 </html>
