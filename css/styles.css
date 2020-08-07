@@ -37,17 +37,42 @@ html, body {
 
   /******BANNER SECTION******/
   #banner {
+    position: absolute;
+    left: 0;
+    top: 0;
     display: flex;
     justify-content: center;
     width: 100%;
     background: var(--chardonnay);
   }
+
+  #banner .text-container {
+    display: flex;
+    padding: 4px;
+    overflow: hidden;
+    justify-content: center;
+  }
+
   #banner .banner-txt {
     /* color: var(--bg-alt-color); */
     font-size: 11px;
     text-align: center;
-    padding: 4px;
+    white-space: nowrap;
+    animation: animate 47s linear infinite;
+    margin-right: 10px;
   }
+
+  /* @keyframes animate 
+  {
+    0%
+    {
+      transform: translateX(0);
+    }
+    100%
+    {
+      transform: translateX(-100%);
+    }
+  } */
   /******BANNER SECTION******/
 
   /******HEADER SECTION******/
@@ -64,7 +89,7 @@ html, body {
   header .sm-header {
     display: flex;
     justify-content: space-between;
-    padding: 5px 17px;
+    padding: 30px 17px 8px 17px;
   }
 
 
@@ -93,7 +118,7 @@ html, body {
     position: fixed;
     height: 100vh;
     width: 100vw;
-    z-index: 900;
+    z-index: 1000;
     display: flex;
     left: -100%;
   }
@@ -113,7 +138,7 @@ html, body {
   .mobile-menu .overlay{
     flex: 0 0 25%;
     background: var(--bg-color);
-    opacity: .5;
+    opacity: 0;
   }
   /*****MOBILE MENU*****/
 
@@ -566,6 +591,10 @@ html, body {
     header .sm-header .r-side .header-icons.bag{
       color: #ccc;
       margin-right: 25px;
+    }
+
+    header .sm-header .r-side .menu-btn{
+      
     }
 
     header .lg-header { display: none; }
