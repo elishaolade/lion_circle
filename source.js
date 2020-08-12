@@ -1,11 +1,14 @@
 let menuBtn = document.querySelector(".menu-btn");
 let mobileMenu = document.querySelector(".mobile-menu");
 let body = document.querySelector("body");
+let banner = document.querySelector("#banner");
+
+let deduct = Math.floor(banner.offsetHeight/3);
 
 var controller = new ScrollMagic.Controller();
 var timeline = new TimelineMax();
 var box1Tween = gsap.to("#banner", .3, { opacity: 0, duration: .4, ease: "power2.in" });
-var box2Tween = gsap.to(".sm-header", .3, { paddingTop: 8,  duration: .6, ease: "power2.in"});
+var box2Tween = gsap.to(".sm-header", .3, { paddingTop: deduct,  duration: .6, ease: "power2.in"});
 var stretch = gsap.from(".collections-area", { height: 0 });
 var produtDetailStretch = gsap.from(".product-details", { height: 0 });
 let totalDuration = 3;

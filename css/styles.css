@@ -544,17 +544,29 @@ html, body {
 
     /******BANNER SECTION******/
     #banner {
+      position: absolute;
+      left: 0;
+      top: 0;
       display: flex;
       justify-content: center;
       width: 100%;
       background: var(--chardonnay);
-      /* background: var(--fringy-flower); */
     }
+  
+    #banner .text-container {
+      display: flex;
+      padding: 4px;
+      overflow: hidden;
+      justify-content: center;
+    }
+  
     #banner .banner-txt {
       /* color: var(--bg-alt-color); */
-      font-size: .9rem;
+      font-size: 11px;
       text-align: center;
-      padding: 4px;
+      white-space: nowrap;
+      animation: animate 47s linear infinite;
+      margin-right: 10px;
     }
     /******BANNER SECTION******/
 
@@ -572,7 +584,7 @@ html, body {
     header .sm-header {
       display: flex;
       justify-content: space-between;
-      padding: 5px 17px;
+      padding: 30px 17px 8px 17px;
     }
 
 
@@ -599,6 +611,8 @@ html, body {
 
     header .lg-header { display: none; }
     /******HEADER SECTION******/
+
+    
 
     /******CAROUSEL SECTION****/
     #carousel {
@@ -932,17 +946,29 @@ html, body {
 
   /******BANNER SECTION******/
   #banner {
+    position: absolute;
+    left: 0;
+    top: 0;
     display: flex;
     justify-content: center;
     width: 100%;
     background: var(--chardonnay);
-    /* background: var(--fringy-flower); */
   }
+
+  #banner .text-container {
+    display: flex;
+    padding: 4px;
+    overflow: hidden;
+    justify-content: center;
+  }
+
   #banner .banner-txt {
     /* color: var(--bg-alt-color); */
-    font-size: .9rem;
+    font-size: 11px;
     text-align: center;
-    padding: 4px;
+    white-space: nowrap;
+    animation: animate 47s linear infinite;
+    margin-right: 10px;
   }
   /******BANNER SECTION******/
 
@@ -960,7 +986,7 @@ html, body {
   header .sm-header {
     display: flex;
     justify-content: space-between;
-    padding: 5px 17px;
+    padding: 30px 17px 8px 17px;
   }
 
 
@@ -983,6 +1009,35 @@ html, body {
 
   header .lg-header { display: none; }
   /****HEADER SECTION*******/
+
+/*****MOBILE MENU*****/
+  .mobile-menu {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1000;
+    display: flex;
+    left: -100%;
+  }
+
+  .mobile-menu .options-container {
+    flex: 0 0 75%;
+    background: var(--bg-color);
+    padding: 85px 17px 20px 17px;
+    font-size: 1.25rem;
+  }
+
+  .mobile-menu .options-container a {
+    color: #000;
+
+  }
+
+  .mobile-menu .overlay{
+    flex: 0 0 25%;
+    background: var(--bg-color);
+    opacity: 0;
+  }
+  /*****MOBILE MENU*****/
 
   /******CAROUSEL SECTION****/
   #carousel {
@@ -1090,7 +1145,7 @@ html, body {
   }
 
   #products .product .product-details {
-    border: 1px solid #000000;
+    background: var(--bg-color);
   }
 
   #products .product .product-details .w-container{
@@ -1102,6 +1157,7 @@ html, body {
     justify-content: space-between;
     align-items: center;
     padding: 15px 0;
+    
   }
 
   #products .collection-display .collection-container {
@@ -1126,27 +1182,21 @@ html, body {
     text-decoration: none;
   }
 
-  #products .product_link:hover .product-details{
-    background: var(--chardonnay);
-  }
 
   #products .collection-display .collection-container .product .product-details {
-    /* display: none; */
+    display: none;
     position: absolute;
     bottom: 0;
     width: 100%;
     padding: 0 20px;
-    background: var(--bg-color);
-    background: transparent;
-    color: #FFF;
+    color: var(--bg-color);
     border: none;
-    border-top: 1px solid var(--bg-color);
-    border-right: 1px solid var(--bg-color);
+    background: transparent;
   }
 
   #products .collection-display .collection-container .product_link:hover .product-details{
-    display: block;
-    background: var(--chardonnay);
+    /* display: block;
+    background: var(--chardonnay); */
   }
 
 
@@ -1381,17 +1431,29 @@ html, body {
 
   /******BANNER SECTION******/
   #banner {
+    position: absolute;
+    left: 0;
+    top: 0;
     display: flex;
     justify-content: center;
     width: 100%;
     background: var(--chardonnay);
-    /* background: var(--fringy-flower); */
   }
+
+  #banner .text-container {
+    display: flex;
+    padding: 4px;
+    overflow: hidden;
+    justify-content: center;
+  }
+
   #banner .banner-txt {
     /* color: var(--bg-alt-color); */
-    font-size: .9rem;
+    font-size: 11px;
     text-align: center;
-    padding: 4px;
+    white-space: nowrap;
+    animation: animate 47s linear infinite;
+    margin-right: 10px;
   }
   /******BANNER SECTION******/
 
@@ -1510,6 +1572,35 @@ html, body {
     margin-right: 25px;
   }
   /******HEADER SECTION******/
+
+  /*****MOBILE MENU*****/
+  .mobile-menu {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1000;
+    display: flex;
+    left: -100%;
+  }
+
+  .mobile-menu .options-container {
+    flex: 0 0 75%;
+    background: var(--bg-color);
+    padding: 85px 17px 20px 17px;
+    font-size: 1.25rem;
+  }
+
+  .mobile-menu .options-container a {
+    color: #000;
+
+  }
+
+  .mobile-menu .overlay{
+    flex: 0 0 25%;
+    background: var(--bg-color);
+    opacity: 0;
+  }
+  /*****MOBILE MENU*****/
 
   /******CAROUSEL SECTION****/
   #carousel {
@@ -1846,17 +1937,29 @@ html, body {
 
   /******BANNER SECTION******/
   #banner {
+    position: absolute;
+    left: 0;
+    top: 0;
     display: flex;
     justify-content: center;
     width: 100%;
     background: var(--chardonnay);
-    /* background: var(--fringy-flower); */
   }
+
+  #banner .text-container {
+    display: flex;
+    padding: 4px;
+    overflow: hidden;
+    justify-content: center;
+  }
+
   #banner .banner-txt {
     /* color: var(--bg-alt-color); */
-    font-size: .9rem;
+    font-size: 11px;
     text-align: center;
-    padding: 4px;
+    white-space: nowrap;
+    animation: animate 47s linear infinite;
+    margin-right: 10px;
   }
   /******BANNER SECTION******/
 
@@ -1952,6 +2055,35 @@ html, body {
     margin-right: 25px;
   }
   /******HEADER SECTION******/
+
+  /*****MOBILE MENU*****/
+  .mobile-menu {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1000;
+    display: flex;
+    left: -100%;
+  }
+
+  .mobile-menu .options-container {
+    flex: 0 0 75%;
+    background: var(--bg-color);
+    padding: 85px 17px 20px 17px;
+    font-size: 1.25rem;
+  }
+
+  .mobile-menu .options-container a {
+    color: #000;
+
+  }
+
+  .mobile-menu .overlay{
+    flex: 0 0 25%;
+    background: var(--bg-color);
+    opacity: 0;
+  }
+  /*****MOBILE MENU*****/
 
   /******CAROUSEL SECTION****/
   #carousel {
